@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fffdf8; /* Slightly warmer white for an editorial feel */
+  --foreground: #241816; /* Off-black/espresso text color */
+  
+  --color-cream: #fef4ad;
+  --color-sage: #b5c59b;
+  --color-rose: #da8280;
+  --color-terracotta: #cc5b3b;
+  --color-amber: #f5b861;
+  --color-slate-blue: #699dcb;
+  --color-espresso: #241816;
+  
+  --radius-custom: 16px;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  
+  --color-cream: var(--color-cream);
+  --color-sage: var(--color-sage);
+  --color-rose: var(--color-rose);
+  --color-terracotta: var(--color-terracotta);
+  --color-amber: var(--color-amber);
+  --color-slate-blue: var(--color-slate-blue);
+  --color-espresso: var(--color-espresso);
+  
+  --radius-custom: var(--radius-custom);
+  
+  --font-sans: var(--font-geist-sans), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base resets & styles */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Premium Grain Texture - Fixed Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Custom transitions and premium design touches */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Form focus helper class */
+.form-input-focus {
+  outline: none;
+  border-color: var(--color-terracotta);
+  box-shadow: 0 0 0 4px rgba(220, 130, 128, 0.25);
+}
+
+/* Custom scroll bar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-espresso);
+  opacity: 0.2;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-terracotta);
 }
