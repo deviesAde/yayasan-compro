@@ -13,33 +13,15 @@ export default function DonatePage() {
     name: "",
     email: "",
     phone: "",
-    amount: "100000",
     method: "qris",
-    customAmount: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [fileName, setFileName] = useState("");
 
-  const presetAmounts = [
-    { value: "50000", label: "Rp 50,000" },
-    { value: "100000", label: "Rp 100,000" },
-    { value: "250000", label: "Rp 250,000" },
-    { value: "500000", label: "Rp 500,000" },
-  ];
-
-  const handlePresetSelect = (val: string) => {
-    setFormData({ ...formData, amount: val, customAmount: "" });
-  };
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-  };
-
-  const handleCustomAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const val = e.target.value;
-    setFormData({ ...formData, amount: val, customAmount: val });
   };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -140,56 +122,10 @@ export default function DonatePage() {
                 </div>
               </div>
 
-              {/* Step 1: Amount */}
+              {/* Step 1: Payment Method */}
               <div className="flex flex-col gap-6">
                 <span className="text-[10px] font-mono uppercase tracking-widest text-espresso/30 font-bold text-left flex items-center gap-2">
-                  <span className="w-6 h-[1px] bg-espresso/10" /> 01. Select Amount
-                </span>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                  {presetAmounts.map((preset) => (
-                    <button
-                      key={preset.value}
-                      type="button"
-                      onClick={() => handlePresetSelect(preset.value)}
-                      className={`h-14 rounded-2xl text-[13px] font-bold uppercase tracking-wider transition-all duration-300 flex items-center justify-center border ${
-                        formData.amount === preset.value && !formData.customAmount
-                          ? "bg-espresso text-cream border-espresso shadow-lg shadow-espresso/20"
-                          : "bg-espresso/[0.02] text-espresso/60 border-espresso/5 hover:bg-espresso/[0.05] hover:border-espresso/10"
-                      }`}
-                    >
-                      {preset.label}
-                    </button>
-                  ))}
-                </div>
-
-                <div className="flex flex-col gap-3 text-left">
-                  <label htmlFor="customAmount" className="text-[11px] font-bold uppercase tracking-widest text-espresso/40 ml-2">
-                    Or Enter Custom Amount (Rp)
-                  </label>
-                  <div className="relative group">
-                    <span className="absolute left-6 top-1/2 transform -translate-y-1/2 text-sm font-bold text-espresso/30">
-                      Rp
-                    </span>
-                    <input
-                      type="number"
-                      id="customAmount"
-                      name="customAmount"
-                      value={formData.customAmount}
-                      onChange={handleCustomAmountChange}
-                      placeholder="e.g. 750,000"
-                      className="w-full h-14 pl-14 pr-6 rounded-2xl border border-espresso/10 text-sm bg-background font-bold text-espresso placeholder:text-espresso/20 focus:outline-none focus:border-terracotta focus:ring-4 focus:ring-terracotta/5 transition-all duration-300 shadow-sm group-hover:border-espresso/20"
-                    />
-                  </div>
-                  <span className="text-[9px] text-espresso/30 font-mono tracking-wider ml-2 font-bold">
-                    MINIMUM DONATION TRANSFER IS RP 10,000
-                  </span>
-                </div>
-              </div>
-
-              {/* Step 2: Payment Method */}
-              <div className="flex flex-col gap-6">
-                <span className="text-[10px] font-mono uppercase tracking-widest text-espresso/30 font-bold text-left flex items-center gap-2">
-                   <span className="w-6 h-[1px] bg-espresso/10" /> 02. Transfer Method
+                   <span className="w-6 h-[1px] bg-espresso/10" /> 01. Transfer Method
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <label
@@ -228,10 +164,10 @@ export default function DonatePage() {
                 </div>
               </div>
 
-              {/* Step 3: Donor Details */}
+              {/* Step 2: Donor Details */}
               <div className="flex flex-col gap-6">
                 <span className="text-[10px] font-mono uppercase tracking-widest text-espresso/30 font-bold text-left flex items-center gap-2">
-                   <span className="w-6 h-[1px] bg-espresso/10" /> 03. Donor Particulars
+                   <span className="w-6 h-[1px] bg-espresso/10" /> 02. Donor Particulars
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2.5 text-left">
@@ -250,10 +186,10 @@ export default function DonatePage() {
                 </div>
               </div>
 
-              {/* Step 4: Receipt Upload */}
+              {/* Step 3: Receipt Upload */}
               <div className="flex flex-col gap-6">
                 <span className="text-[10px] font-mono uppercase tracking-widest text-espresso/30 font-bold text-left flex items-center gap-2">
-                   <span className="w-6 h-[1px] bg-espresso/10" /> 04. Proof of Transfer
+                   <span className="w-6 h-[1px] bg-espresso/10" /> 03. Proof of Transfer
                 </span>
                 <label className="relative w-full h-32 rounded-[32px] border border-dashed border-espresso/20 bg-espresso/[0.01] hover:bg-espresso/[0.03] hover:border-terracotta transition-all duration-300 flex flex-col items-center justify-center gap-3 cursor-pointer text-center group">
                   <div className="w-12 h-12 rounded-2xl bg-espresso/5 flex items-center justify-center text-espresso group-hover:bg-terracotta group-hover:text-cream transition-all">
