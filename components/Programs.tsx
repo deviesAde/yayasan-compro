@@ -84,18 +84,18 @@ export default function Programs() {
   ];
 
   return (
-    <section id="programs" className="w-full py-32 px-6 md:px-12 max-w-[1400px] mx-auto bg-background border-t border-espresso/5">
+    <section id="programs" className="w-full py-32 px-6 md:px-12 max-w-[1400px] mx-auto bg-background border-t border-border-color">
       {/* Header: Vertical Stack */}
       <div className="flex flex-col items-center text-center gap-5 mb-20">
         <div className="flex items-center gap-3">
-          <div className="h-[1px] w-8 bg-espresso/10" />
-          <span className="text-[10px] font-mono tracking-[0.3em] text-espresso/40 uppercase font-bold">What We Do</span>
-          <div className="h-[1px] w-8 bg-espresso/10" />
+          <div className="h-[1px] w-8 bg-border-color" />
+          <span className="text-[10px] font-mono tracking-[0.3em] text-foreground-subtle uppercase font-bold">What We Do</span>
+          <div className="h-[1px] w-8 bg-border-color" />
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-espresso font-sans text-balance max-w-[20ch]">
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground font-sans text-balance max-w-[20ch]">
           Core Support Programs
         </h2>
-        <p className="text-base md:text-lg text-espresso/60 leading-relaxed max-w-[60ch]">
+        <p className="text-base md:text-lg text-foreground-subtle leading-relaxed max-w-[60ch]">
           Comprehensive support structures spanning healthcare accommodation, clinical nutrition, and emotional therapy.
         </p>
       </div>
@@ -111,7 +111,7 @@ export default function Programs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.8, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] as const }}
-              className={`relative rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-end group transition-all duration-500 hover:shadow-2xl hover:shadow-espresso/10 ${prog.span}`}
+              className={`relative rounded-[32px] overflow-hidden shadow-sm flex flex-col justify-end group transition-all duration-500 hover:shadow-2xl hover:shadow-foreground/10 ${prog.span}`}
             >
               {/* Type 1: Image Background Card */}
               {prog.type === "image" && prog.src && (
@@ -125,7 +125,7 @@ export default function Programs() {
                       className="object-cover transition-transform duration-1000 group-hover:scale-110"
                     />
                     {/* Shadow overlay for text readability */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-espresso/90 via-espresso/30 to-transparent opacity-80" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0808]/90 via-[#0a0808]/30 to-transparent opacity-80" />
                   </div>
                   <div className="relative z-10 p-10 flex flex-col justify-between h-full text-cream">
                     {/* Icon container */}
@@ -159,23 +159,23 @@ export default function Programs() {
 
               {/* Type 2: Solid Tint Card */}
               {prog.type === "tint" && (
-                <div className={`p-10 flex flex-col justify-between h-full text-espresso transition-colors duration-500 ${prog.bgClass}`}>
-                  <div className="w-12 h-12 rounded-[20px] bg-espresso/5 border border-espresso/10 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:bg-espresso group-hover:text-cream">
-                    <IconComponent size={24} weight="fill" className="text-espresso group-hover:text-cream transition-colors" />
+                <div className={`p-10 flex flex-col justify-between h-full text-foreground transition-colors duration-500 ${prog.bgClass}`}>
+                  <div className="w-12 h-12 rounded-[20px] bg-foreground/[0.05] border border-border-color flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:bg-foreground group-hover:text-background">
+                    <IconComponent size={24} weight="fill" className="text-foreground group-hover:text-background transition-colors" />
                   </div>
                   <div className="flex flex-col gap-4">
                     <span className={`text-[10px] font-mono tracking-widest uppercase font-bold ${prog.accent}`}>
                       {prog.metric}
                     </span>
-                    <h3 className="text-2xl font-bold font-sans text-espresso leading-tight">
+                    <h3 className="text-2xl font-bold font-sans text-foreground leading-tight">
                       {prog.title}
                     </h3>
-                    <p className="text-sm text-espresso/50 leading-relaxed max-w-[40ch]">
+                    <p className="text-sm text-foreground-subtle leading-relaxed max-w-[40ch]">
                       {prog.desc}
                     </p>
                     <Link
                       href="/activity-log"
-                      className="inline-flex items-center gap-2 mt-2 text-xs font-bold uppercase tracking-widest text-espresso hover:text-terracotta transition-colors group/link"
+                      className="inline-flex items-center gap-2 mt-2 text-xs font-bold uppercase tracking-widest text-foreground hover:text-terracotta transition-colors group/link"
                     >
                       Read Impact Report
                       <ArrowUpRight size={16} weight="bold" className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />

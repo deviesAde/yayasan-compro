@@ -65,18 +65,18 @@ export default function ActivityLogPage() {
         {/* Page Header */}
         <div className="flex flex-col items-center text-center gap-6 mb-24 max-w-[70ch] mx-auto">
           <motion.div {...animationProps(0)} className="flex items-center gap-3">
-            <span className="text-[10px] font-mono tracking-[0.3em] text-espresso/40 uppercase font-bold">Transparency</span>
+            <span className="text-[10px] font-mono tracking-[0.3em] text-foreground-subtle uppercase font-bold">Transparency</span>
             <Sparkle weight="fill" className="text-terracotta w-3 h-3" />
           </motion.div>
           <motion.h1 
             {...animationProps(0.1)}
-            className="text-4xl md:text-6xl font-bold tracking-tight text-espresso font-sans leading-tight text-balance"
+            className="text-4xl md:text-6xl font-bold tracking-tight text-foreground font-sans leading-tight text-balance"
           >
             Activity & Impact Log.
           </motion.h1>
           <motion.p 
             {...animationProps(0.2)}
-            className="text-base md:text-lg text-espresso/60 leading-relaxed font-medium"
+            className="text-base md:text-lg text-foreground/60 leading-relaxed font-medium"
           >
             A chronological record of our daily missions, field activities, and support deliveries. We believe in complete transparency of impact.
           </motion.p>
@@ -85,7 +85,7 @@ export default function ActivityLogPage() {
         {/* Timeline List */}
         <div className="max-w-[1000px] mx-auto flex flex-col gap-12 relative">
           {/* Central Line */}
-          <div className="absolute left-[39px] md:left-1/2 top-0 bottom-0 w-[1px] bg-espresso/5 -translate-x-1/2 hidden md:block" />
+          <div className="absolute left-[39px] md:left-1/2 top-0 bottom-0 w-[1px] bg-border-color -translate-x-1/2 hidden md:block" />
           
           {logs.map((log, i) => {
             const Icon = log.icon;
@@ -102,26 +102,26 @@ export default function ActivityLogPage() {
               >
                 {/* Content Side */}
                 <div className={`w-full md:w-[45%] ${isEven ? "md:pl-12" : "md:pr-12 text-left md:text-right"}`}>
-                  <div className={`p-8 rounded-[40px] bg-background border border-espresso/10 shadow-xl shadow-espresso/5 hover:border-espresso/20 transition-all duration-300 group`}>
+                  <div className={`p-8 rounded-[40px] bg-background border border-border-color shadow-xl shadow-foreground/5 hover:border-border-color-strong transition-all duration-300 group`}>
                     <div className={`flex items-center gap-3 mb-4 ${isEven ? "" : "md:flex-row-reverse"}`}>
                       <span className={`text-[10px] font-mono font-bold tracking-widest uppercase px-3 py-1 rounded-full ${log.accent}`}>
                         {log.type}
                       </span>
-                      <span className="text-[10px] font-mono font-bold tracking-widest text-espresso/30 uppercase">
+                      <span className="text-[10px] font-mono font-bold tracking-widest text-foreground-subtle uppercase">
                         {log.date}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-espresso mb-3 font-sans group-hover:text-terracotta transition-colors">
+                    <h3 className="text-xl font-bold text-foreground mb-3 font-sans group-hover:text-terracotta transition-colors">
                       {log.title}
                     </h3>
-                    <p className="text-sm text-espresso/50 leading-relaxed font-medium">
+                    <p className="text-sm text-foreground/50 leading-relaxed font-medium">
                       {log.desc}
                     </p>
                   </div>
                 </div>
 
                 {/* Central Icon */}
-                <div className="absolute left-[39px] md:left-1/2 top-0 md:top-1/2 w-12 h-12 rounded-full bg-background border border-espresso/10 flex items-center justify-center -translate-x-1/2 md:-translate-y-1/2 z-10 shadow-lg">
+                <div className="absolute left-[39px] md:left-1/2 top-0 md:top-1/2 w-12 h-12 rounded-full bg-background border border-border-color flex items-center justify-center -translate-x-1/2 md:-translate-y-1/2 z-10 shadow-lg">
                   <Icon size={24} weight="fill" className="text-terracotta" />
                 </div>
 
