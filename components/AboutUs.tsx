@@ -62,12 +62,12 @@ export default function AboutUs() {
           {/* Vision Block */}
           <motion.div
             {...animationProps(0.3)}
-            className="group p-10 rounded-[40px] bg-sage/10 border border-sage/5 relative overflow-hidden transition-all duration-500 hover:bg-sage/15"
+            className="group p-10 rounded-[40px] bg-sage/20 border border-sage/30 relative overflow-hidden transition-all duration-500 hover:bg-sage/30"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-foreground/[0.02] rounded-full -translate-y-1/2 translate-x-1/2" />
             <div className="relative z-10 flex flex-col gap-4">
               <div className="w-14 h-14 rounded-2xl bg-sage/20 text-foreground flex items-center justify-center transition-transform duration-500 group-hover:rotate-12">
-                <Eye size={28} weight="fill" className="text-terracotta" />
+                <Eye size={28} weight="fill" className="text-sage" />
               </div>
               <h3 className="text-xl font-bold text-foreground font-sans">
                 Our Vision
@@ -81,12 +81,12 @@ export default function AboutUs() {
           {/* Mission Block - Offset */}
           <motion.div
             {...animationProps(0.4)}
-            className="group p-10 rounded-[40px] bg-rose/10 border border-rose/5 lg:-translate-x-12 relative overflow-hidden transition-all duration-500 hover:bg-rose/15"
+            className="group p-10 rounded-[40px] bg-rose/20 border border-rose/30 lg:-translate-x-12 relative overflow-hidden transition-all duration-500 hover:bg-rose/30"
           >
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-foreground/[0.02] rounded-full translate-y-1/2 -translate-x-1/2" />
             <div className="relative z-10 flex flex-col gap-4">
               <div className="w-14 h-14 rounded-2xl bg-rose/20 text-foreground flex items-center justify-center transition-transform duration-500 group-hover:-rotate-12">
-                <Compass size={28} weight="fill" className="text-terracotta" />
+                <Compass size={28} weight="fill" className="text-rose" />
               </div>
               <h3 className="text-xl font-bold text-foreground font-sans">
                 Our Mission
@@ -100,11 +100,11 @@ export default function AboutUs() {
           {/* Values Block */}
           <motion.div
             {...animationProps(0.5)}
-            className="group p-10 rounded-[40px] bg-slate-blue/10 border border-slate-blue/5 relative overflow-hidden transition-all duration-500 hover:bg-slate-blue/15"
+            className="group p-10 rounded-[40px] bg-slate-blue/20 border border-slate-blue/30 relative overflow-hidden transition-all duration-500 hover:bg-slate-blue/30"
           >
             <div className="relative z-10 flex flex-col gap-4">
               <div className="w-14 h-14 rounded-2xl bg-slate-blue/20 text-foreground flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
-                <ShieldCheck size={28} weight="fill" className="text-terracotta" />
+                <ShieldCheck size={28} weight="fill" className="text-slate-blue" />
               </div>
               <h3 className="text-xl font-bold text-foreground font-sans text-balance">
                 Organizational Integrity

@@ -5,13 +5,13 @@
    ============================================ */
 :root {
   /* Light theme (default) */
-  --background: #fffdf8;
-  --background-alt: #f9f4ee;
+  --background: #fef4ad;
+  --background-alt: #b5c59b;
   --foreground: #241816;
-  --foreground-muted: rgba(36, 24, 22, 0.6);
-  --foreground-subtle: rgba(36, 24, 22, 0.4);
-  --border-color: rgba(36, 24, 22, 0.08);
-  --border-color-strong: rgba(36, 24, 22, 0.12);
+  --foreground-muted: rgba(36, 24, 22, 0.7);
+  --foreground-subtle: rgba(36, 24, 22, 0.5);
+  --border-color: rgba(36, 24, 22, 0.12);
+  --border-color-strong: rgba(36, 24, 22, 0.2);
 
   --color-cream: #fef4ad;
   --color-sage: #b5c59b;

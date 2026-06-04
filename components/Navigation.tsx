@@ -31,8 +31,8 @@ export default function Navigation() {
     scrollY,
     [0, 50],
     [
-      "rgba(255, 253, 248, 0)",
-      "rgba(255, 253, 248, 0.85)",
+      "rgba(254, 244, 173, 0)",
+      "rgba(254, 244, 173, 0.95)",
     ]
   );
 

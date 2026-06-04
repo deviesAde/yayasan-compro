@@ -41,8 +41,11 @@ export default function Hero() {
         <span className="text-[20vw] font-bold text-foreground leading-none uppercase tracking-tighter opacity-[0.03]">Hope</span>
       </div>
       
-      <div className="absolute top-0 right-0 w-[60%] h-[60%] rounded-full bg-terracotta/[0.03] blur-[120px] pointer-events-none -z-10" />
-      <div className="absolute bottom-0 left-0 w-[40%] h-[40%] rounded-full bg-sage/5 blur-[100px] pointer-events-none -z-10" />
+      <div className="absolute top-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-terracotta/[0.06] blur-[120px] pointer-events-none -z-10" />
+      <div className="absolute top-[20%] left-[-15%] w-[45vw] h-[45vw] rounded-full bg-sage/[0.07] blur-[100px] pointer-events-none -z-10" />
+      <div className="absolute bottom-[-10%] right-[10%] w-[40vw] h-[40vw] rounded-full bg-slate-blue/[0.05] blur-[110px] pointer-events-none -z-10" />
+      <div className="absolute bottom-[20%] left-[20%] w-[35vw] h-[35vw] rounded-full bg-rose/[0.05] blur-[90px] pointer-events-none -z-10" />
+      <div className="absolute top-[40%] right-[20%] w-[30vw] h-[30vw] rounded-full bg-amber/[0.06] blur-[100px] pointer-events-none -z-10" />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-4 items-center w-full relative z-10">
         {/* Left Column: Asymmetric Text Content */}
