@@ -16,7 +16,7 @@ export default function AboutUs() {
   return (
     <section
       id="about"
-      className="w-full py-32 px-6 md:px-12 max-w-[1400px] mx-auto bg-background border-t border-espresso/5 overflow-hidden"
+      className="w-full py-32 px-6 md:px-12 max-w-[1400px] mx-auto bg-background border-t border-border-color overflow-hidden"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
         {/* Left Column: Editorial Content (6 Columns) */}
@@ -29,14 +29,14 @@ export default function AboutUs() {
             
             <motion.h2
               {...animationProps(0.1)}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-espresso font-sans leading-[1.1] text-balance"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground font-sans leading-[1.1] text-balance"
             >
               A Journey of Hope and Sanctuary.
             </motion.h2>
 
             <motion.div
               {...animationProps(0.2)}
-              className="text-base md:text-lg text-espresso/60 leading-relaxed flex flex-col gap-6 max-w-[55ch]"
+              className="text-base md:text-lg text-foreground-subtle leading-relaxed flex flex-col gap-6 max-w-[55ch]"
             >
               <p>
                 Founded in 2018, Miracle Leukemia was born when oncology volunteers witnessed the heavy burden placed on families traveling from remote regions for pediatric cancer treatments.
@@ -64,15 +64,15 @@ export default function AboutUs() {
             {...animationProps(0.3)}
             className="group p-10 rounded-[40px] bg-sage/10 border border-sage/5 relative overflow-hidden transition-all duration-500 hover:bg-sage/15"
           >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-espresso/[0.02] rounded-full -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute top-0 right-0 w-32 h-32 bg-foreground/[0.02] rounded-full -translate-y-1/2 translate-x-1/2" />
             <div className="relative z-10 flex flex-col gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-sage/20 text-espresso flex items-center justify-center transition-transform duration-500 group-hover:rotate-12">
+              <div className="w-14 h-14 rounded-2xl bg-sage/20 text-foreground flex items-center justify-center transition-transform duration-500 group-hover:rotate-12">
                 <Eye size={28} weight="fill" className="text-terracotta" />
               </div>
-              <h3 className="text-xl font-bold text-espresso font-sans">
+              <h3 className="text-xl font-bold text-foreground font-sans">
                 Our Vision
               </h3>
-              <p className="text-sm md:text-base text-espresso/60 leading-relaxed max-w-[40ch]">
+              <p className="text-sm md:text-base text-foreground-subtle leading-relaxed max-w-[40ch]">
                 To build a supportive sanctuary where every child battling leukemia receives therapeutic housing, high-quality nutritional care, and robust emotional guidance.
               </p>
             </div>
@@ -83,15 +83,15 @@ export default function AboutUs() {
             {...animationProps(0.4)}
             className="group p-10 rounded-[40px] bg-rose/10 border border-rose/5 lg:-translate-x-12 relative overflow-hidden transition-all duration-500 hover:bg-rose/15"
           >
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-espresso/[0.02] rounded-full translate-y-1/2 -translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-foreground/[0.02] rounded-full translate-y-1/2 -translate-x-1/2" />
             <div className="relative z-10 flex flex-col gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-rose/20 text-espresso flex items-center justify-center transition-transform duration-500 group-hover:-rotate-12">
+              <div className="w-14 h-14 rounded-2xl bg-rose/20 text-foreground flex items-center justify-center transition-transform duration-500 group-hover:-rotate-12">
                 <Compass size={28} weight="fill" className="text-terracotta" />
               </div>
-              <h3 className="text-xl font-bold text-espresso font-sans">
+              <h3 className="text-xl font-bold text-foreground font-sans">
                 Our Mission
               </h3>
-              <p className="text-sm md:text-base text-espresso/60 leading-relaxed max-w-[40ch]">
+              <p className="text-sm md:text-base text-foreground-subtle leading-relaxed max-w-[40ch]">
                 We manage clean home shelters, deliver specialized dietary milk kits, coordinate volunteers for ward visits, and provide cost-free support services to households.
               </p>
             </div>
@@ -103,13 +103,13 @@ export default function AboutUs() {
             className="group p-10 rounded-[40px] bg-slate-blue/10 border border-slate-blue/5 relative overflow-hidden transition-all duration-500 hover:bg-slate-blue/15"
           >
             <div className="relative z-10 flex flex-col gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-slate-blue/20 text-espresso flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+              <div className="w-14 h-14 rounded-2xl bg-slate-blue/20 text-foreground flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
                 <ShieldCheck size={28} weight="fill" className="text-terracotta" />
               </div>
-              <h3 className="text-xl font-bold text-espresso font-sans text-balance">
+              <h3 className="text-xl font-bold text-foreground font-sans text-balance">
                 Organizational Integrity
               </h3>
-              <p className="text-sm md:text-base text-espresso/60 leading-relaxed max-w-[40ch]">
+              <p className="text-sm md:text-base text-foreground-subtle leading-relaxed max-w-[40ch]">
                 Our support is open to all patients without discrimination. We operate with complete financial transparency, publishing impact reports for our donors and partners.
               </p>
             </div>

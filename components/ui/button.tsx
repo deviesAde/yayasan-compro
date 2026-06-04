@@ -5,15 +5,15 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-2xl text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-[0.98]",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-2xl text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-[0.98]",
   {
     variants: {
       variant: {
-        default: "bg-terracotta text-cream hover:bg-espresso hover:text-cream shadow-md shadow-terracotta/10",
-        destructive: "bg-rose text-espresso hover:bg-terracotta hover:text-cream",
-        outline: "border border-espresso/15 bg-transparent text-espresso hover:bg-espresso/5",
-        secondary: "bg-sage/20 text-espresso hover:bg-sage/35",
-        ghost: "hover:bg-espresso/5 text-espresso",
+        default: "bg-terracotta text-cream hover:bg-foreground hover:text-cream shadow-md shadow-terracotta/10",
+        destructive: "bg-rose text-foreground hover:bg-terracotta hover:text-cream",
+        outline: "border border-border-color-strong bg-transparent text-foreground hover:bg-foreground/5",
+        secondary: "bg-sage/20 text-foreground hover:bg-sage/35",
+        ghost: "hover:bg-foreground/5 text-foreground",
         link: "text-terracotta underline-offset-4 hover:underline",
       },
       size: {

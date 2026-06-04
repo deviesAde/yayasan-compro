@@ -1,9 +1,18 @@
 @import "tailwindcss";
 
+/* ============================================
+   Design Tokens — Light & Dark Themes
+   ============================================ */
 :root {
-  --background: #fffdf8; /* Slightly warmer white for an editorial feel */
-  --foreground: #241816; /* Off-black/espresso text color */
-  
+  /* Light theme (default) */
+  --background: #fffdf8;
+  --background-alt: #f9f4ee;
+  --foreground: #241816;
+  --foreground-muted: rgba(36, 24, 22, 0.6);
+  --foreground-subtle: rgba(36, 24, 22, 0.4);
+  --border-color: rgba(36, 24, 22, 0.08);
+  --border-color-strong: rgba(36, 24, 22, 0.12);
+
   --color-cream: #fef4ad;
   --color-sage: #b5c59b;
   --color-rose: #da8280;
@@ -11,14 +20,72 @@
   --color-amber: #f5b861;
   --color-slate-blue: #699dcb;
   --color-espresso: #241816;
-  
-  --radius-custom: 16px;
+
+  /* Darkened accent overlays (for cards/borders in light) */
+  --sage-dim: rgba(181, 197, 155, 0.15);
+  --rose-dim: rgba(218, 130, 128, 0.12);
+  --terracotta-dim: rgba(204, 91, 59, 0.08);
+  --slate-dim: rgba(105, 157, 203, 0.12);
+  --amber-dim: rgba(245, 184, 97, 0.12);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(36, 24, 22, 0.06);
+  --shadow-md: 0 4px 12px rgba(36, 24, 22, 0.08);
+  --shadow-lg: 0 8px 32px rgba(36, 24, 22, 0.12);
+  --shadow-xl: 0 16px 48px rgba(36, 24, 22, 0.15);
 }
 
+/* Dark theme — editorial warm charcoal */
+[data-theme="dark"] {
+  --background: #1a1614;
+  --background-alt: #221e1b;
+  --foreground: #f0e8d5;
+  --foreground-muted: rgba(240, 232, 213, 0.55);
+  --foreground-subtle: rgba(240, 232, 213, 0.35);
+  --border-color: rgba(240, 232, 213, 0.08);
+  --border-color-strong: rgba(240, 232, 213, 0.15);
+
+  --color-cream: #fef4ad;
+  --color-sage: #8fa87a;
+  --color-rose: #c47a78;
+  --color-terracotta: #d97a58;
+  --color-amber: #dba55a;
+  --color-slate-blue: #5a8db8;
+  --color-espresso: #f0e8d5;
+
+  --sage-dim: rgba(143, 168, 122, 0.15);
+  --rose-dim: rgba(196, 122, 120, 0.15);
+  --terracotta-dim: rgba(217, 122, 88, 0.12);
+  --slate-dim: rgba(90, 141, 184, 0.15);
+  --amber-dim: rgba(219, 165, 90, 0.15);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.45);
+}
+
+/* ============================================
+   Unified Radius System
+   ============================================ */
+:root {
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-2xl: 40px;
+  --radius-3xl: 48px;
+  --radius-full: 9999px;
+}
+
+/* ============================================
+   Tailwind v4 Theme Registration
+   ============================================ */
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
+
   --color-cream: var(--color-cream);
   --color-sage: var(--color-sage);
   --color-rose: var(--color-rose);
@@ -26,14 +93,57 @@
   --color-amber: var(--color-amber);
   --color-slate-blue: var(--color-slate-blue);
   --color-espresso: var(--color-espresso);
-  
-  --radius-custom: var(--radius-custom);
-  
+
+  --color-sage-dim: var(--sage-dim);
+  --color-rose-dim: var(--rose-dim);
+  --color-terracotta-dim: var(--terracotta-dim);
+  --color-slate-dim: var(--slate-dim);
+  --color-amber-dim: var(--amber-dim);
+
+  --radius-xs: var(--radius-xs);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-2xl: var(--radius-2xl);
+  --radius-3xl: var(--radius-3xl);
+
   --font-sans: var(--font-geist-sans), sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
 }
 
-/* Base resets & styles */
+/* ============================================
+   Animation Primitives
+   ============================================ */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+@keyframes scale-up {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
 html {
   scroll-behavior: smooth;
 }
@@ -44,6 +154,7 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Premium Grain Texture - Fixed Overlay */
@@ -59,7 +170,12 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-/* Custom transitions and premium design touches */
+/* Dark mode grain — slightly different feel */
+[data-theme="dark"] body::before {
+  opacity: 0.035;
+}
+
+/* Utility: Text balance */
 .text-balance {
   text-wrap: balance;
 }
@@ -79,10 +195,15 @@ body::before {
   background: var(--background);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-espresso);
+  background: var(--foreground);
   opacity: 0.2;
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-terracotta);
+}
+
+/* Dark mode transitions for theme-aware elements */
+section, div, nav, footer, button, a {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }

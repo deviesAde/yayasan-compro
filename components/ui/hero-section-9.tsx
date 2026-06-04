@@ -100,12 +100,12 @@ const HeroSection = ({ title, subtitle, actions, stats, images, className }: Her
           </motion.div>
 
           <motion.h1
-            className="text-4xl font-bold tracking-tight text-espresso sm:text-6xl font-sans leading-[1.15]"
+            className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl font-sans leading-[1.15]"
             variants={itemVariants}
           >
             {title}
           </motion.h1>
-          <motion.p className="mt-6 max-w-md text-base md:text-lg text-espresso/75 leading-relaxed" variants={itemVariants}>
+          <motion.p className="mt-6 max-w-md text-base md:text-lg text-foreground/75 leading-relaxed" variants={itemVariants}>
             {subtitle}
           </motion.p>
           <motion.div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start" variants={itemVariants}>
@@ -120,8 +120,8 @@ const HeroSection = ({ title, subtitle, actions, stats, images, className }: Her
               <div key={index} className="flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-full bg-sage/15 text-terracotta">{stat.icon}</div>
                 <div className="text-left">
-                  <p className="text-xl font-bold text-espresso">{stat.value}</p>
-                  <p className="text-xs font-medium text-espresso/60">{stat.label}</p>
+                  <p className="text-xl font-bold text-foreground">{stat.value}</p>
+                  <p className="text-xs font-medium text-foreground/60">{stat.label}</p>
                 </div>
               </div>
             ))}
@@ -156,21 +156,21 @@ const HeroSection = ({ title, subtitle, actions, stats, images, className }: Her
 
           {/* Images with premium layered framing */}
           <motion.div
-            className="absolute left-1/2 top-0 h-48 w-48 -translate-x-1/2 rounded-2xl bg-background p-2 shadow-lg sm:h-64 sm:w-64 border border-espresso/10"
+            className="absolute left-1/2 top-0 h-48 w-48 -translate-x-1/2 rounded-2xl bg-background p-2 shadow-lg sm:h-64 sm:w-64 border border-border-color"
             style={{ transformOrigin: 'bottom center' }}
             variants={imageVariants}
           >
             <img src={images[0]} alt="Primary smiling brave child painting" className="h-full w-full rounded-xl object-cover" />
           </motion.div>
           <motion.div
-            className="absolute right-0 top-1/3 h-40 w-40 rounded-2xl bg-background p-2 shadow-lg sm:h-56 sm:w-56 border border-espresso/10"
+            className="absolute right-0 top-1/3 h-40 w-40 rounded-2xl bg-background p-2 shadow-lg sm:h-56 sm:w-56 border border-border-color"
             style={{ transformOrigin: 'left center' }}
             variants={imageVariants}
           >
             <img src={images[1]} alt="Comfortable shelter environment" className="h-full w-full rounded-xl object-cover" />
           </motion.div>
           <motion.div
-            className="absolute bottom-0 left-0 h-32 w-32 rounded-2xl bg-background p-2 shadow-lg sm:h-48 sm:w-48 border border-espresso/10"
+            className="absolute bottom-0 left-0 h-32 w-32 rounded-2xl bg-background p-2 shadow-lg sm:h-48 sm:w-48 border border-border-color"
             style={{ transformOrigin: 'top right' }}
             variants={imageVariants}
           >
