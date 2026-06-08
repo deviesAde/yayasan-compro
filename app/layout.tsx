@@ -66,10 +66,10 @@ const jsonLd = {
   },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Jalan Cempaka Putih Raya No. 42A",
-    addressLocality: "Jakarta Pusat",
-    addressRegion: "DKI Jakarta",
-    postalCode: "10510",
+    streetAddress: "Jalan Lb. Rejo No. 1083, Sekip Jaya, Kemuning",
+    addressLocality: "Palembang",
+    addressRegion: "Sumatera Selatan",
+    postalCode: "30114",
     addressCountry: "ID",
   },
 };

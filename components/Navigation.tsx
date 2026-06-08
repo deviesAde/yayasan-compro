@@ -51,24 +51,24 @@ export default function Navigation() {
     >
       <div className="max-w-[1400px] mx-auto w-full flex items-center justify-between">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="relative w-12 h-12 rounded-full flex items-center justify-center transition-transform duration-300"
-            style={{ backgroundColor: "#CC5C3D" }}
-          >
-            <Image
-              src="/logoo.png"
-              alt="Logo"
-              fill
-              className="object-contain p-1.5"
-              priority
-            />
-          </motion.div>
-          <div className="flex flex-col leading-none">
-            <div className="flex items-baseline gap-1.5">
-              <div className="relative h-[22px] w-[72px] mt-1.5">
+        <div className="flex items-center gap-2 md:gap-3">
+          <Link href="/" className="flex items-center gap-2 md:gap-3 group">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="relative w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-transform duration-300"
+              style={{ backgroundColor: "#CC5C3D" }}
+            >
+              <Image
+                src="/logoo.png"
+                alt="Logo"
+                fill
+                className="object-contain p-1.5"
+                priority
+              />
+            </motion.div>
+            <div className="flex flex-col leading-none">
+              <div className="relative h-[18px] w-[64px] md:h-[22px] md:w-[72px]">
                 <Image
                   src="/logo1.png"
                   alt="Miracle"
@@ -77,15 +77,26 @@ export default function Navigation() {
                   priority
                 />
               </div>
-              <span className="font-sans font-bold text-lg md:text-xl tracking-tight text-foreground leading-none">
-                Leukemia
+              <span className="text-[8px] md:text-[9px] text-foreground-subtle font-mono tracking-[0.2em] uppercase mt-1">
+                Befriend the Brave
               </span>
             </div>
-            <span className="text-[9px] text-foreground-subtle font-mono tracking-[0.2em] uppercase mt-1">
-              Befriend the Brave
-            </span>
+          </Link>
+
+          {/* Vertical Divider */}
+          <div className="h-6 md:h-8 w-[1px] bg-foreground/15 self-center mx-0.5 md:mx-1" />
+
+          {/* Co-brand Logo */}
+          <div className="relative h-[28px] w-[37px] md:h-[32px] md:w-[42px]">
+            <Image
+              src="/logo2.png"
+              alt="Secondary Logo"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
-        </Link>
+        </div>
 
         {/* Desktop Links + Actions */}
         <div className="hidden md:flex items-center gap-6">
