@@ -66,7 +66,7 @@ export default function Stories() {
             className="relative w-full h-[400px] rounded-[40px] overflow-hidden shadow-2xl shadow-foreground/15 group border border-border-color"
           >
             <Image
-              src="/hero_child_smiling.png"
+              src="/Miracle%20of%20Smile%202026/IMG_2422.webp"
               alt="Patient journey video cover showing painting activities"
               fill
               className="object-cover transition-transform duration-[3s] group-hover:scale-110"

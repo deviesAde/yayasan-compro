@@ -12,29 +12,32 @@ export default function ActiveCampaigns() {
     {
       title: "Rumah Singgah Ceria: A Home Away From Home",
       description: "Providing free housing, nutritional meals, and child play areas for patients undergoing chemotherapy far from home.",
-      image: "/shelter_home.png",
+      image: "/2024/IMG_1866.webp",
       tag: "Shelter",
       accent: "bg-sage",
       hoverClass: "hover:shadow-sage/10 hover:border-sage/40",
       topBorder: "border-t-sage",
+      objectPosition: "center 5%",
     },
     {
       title: "Nutrition & Care Kits for Young Heroes",
       description: "Delivering boxes filled with clinical milk powder, vitamins, healthy fruits, and toys to children during recovery phases.",
-      image: "/nutrition_kits.png",
+      image: "/Cancer%20Day%202026/IMG_5002.webp",
       tag: "Nutrition",
       accent: "bg-amber",
       hoverClass: "hover:shadow-amber/10 hover:border-amber/40",
       topBorder: "border-t-amber",
+      objectPosition: "center",
     },
     {
       title: "Brave Hearts: Life-Saving Medical Fund",
       description: "Financing emergency blood transfusions, medicines, and specialized diagnostic tests for families in financial need.",
-      image: "/medical_support.png",
+      image: "/Miracle%20of%20Smile%202026/grain-8608.webp",
       tag: "Medical",
       accent: "bg-rose",
       hoverClass: "hover:shadow-rose/10 hover:border-rose/40",
       topBorder: "border-t-rose",
+      objectPosition: "center",
     },
   ];
 
@@ -80,6 +83,7 @@ export default function ActiveCampaigns() {
                   fill
                   sizes="(max-w-768px) 100vw, 33vw"
                   className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                  style={{ objectPosition: camp.objectPosition }}
                 />
                 <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/0 transition-colors duration-500" />
                 <span className={`absolute top-6 left-6 inline-block px-4 py-1.5 text-[10px] font-mono tracking-widest font-bold text-foreground rounded-full uppercase shadow-sm ${camp.accent}`}>

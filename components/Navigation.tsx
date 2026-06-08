@@ -1,30 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { Heart, List, X, Moon, Sun } from "@phosphor-icons/react";
+import { Heart, List, X } from "@phosphor-icons/react";
 import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">("light");
   const { scrollY } = useScroll();
-
-  // Initialize theme from data-theme attribute
-  useEffect(() => {
-    const currentTheme =
-      document.documentElement.getAttribute("data-theme") || "light";
-    setTheme(currentTheme as "light" | "dark");
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
-    try {
-      localStorage.setItem("ml-theme", newTheme);
-    } catch (e) {}
-  };
 
   // Refined transitions for the navbar — using CSS variables for theme awareness
   const backgroundColor = useTransform(
@@ -102,21 +85,6 @@ export default function Navigation() {
             </Link>
           ))}
 
-          {/* Dark Mode Toggle */}
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={toggleTheme}
-            className="w-10 h-10 rounded-full bg-foreground/[0.05] border border-border-color flex items-center justify-center text-foreground-muted hover:text-terracotta hover:border-terracotta/30 hover:bg-terracotta/5 transition-all duration-300"
-            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-          >
-            {theme === "light" ? (
-              <Moon size={18} weight="fill" />
-            ) : (
-              <Sun size={18} weight="fill" />
-            )}
-          </motion.button>
-
           {/* Action Button */}
           <Link
             href="/donate"
@@ -126,20 +94,8 @@ export default function Navigation() {
           </Link>
         </div>
 
-        {/* Mobile Toggle + Theme */}
-        <div className="md:hidden flex items-center gap-3">
-          <motion.button
-            whileTap={{ scale: 0.9 }}
-            onClick={toggleTheme}
-            className="w-9 h-9 rounded-full bg-foreground/[0.05] border border-border-color flex items-center justify-center text-foreground-muted hover:text-terracotta transition-all"
-            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-          >
-            {theme === "light" ? (
-              <Moon size={16} weight="fill" />
-            ) : (
-              <Sun size={16} weight="fill" />
-            )}
-          </motion.button>
+        {/* Mobile Toggle */}
+        <div className="md:hidden flex items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="p-2 text-foreground-muted hover:text-terracotta transition-colors focus:outline-none"

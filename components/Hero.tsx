@@ -128,7 +128,7 @@ export default function Hero() {
           {/* Main Visual Frame */}
           <div className="relative w-full h-full rounded-[40px] overflow-hidden shadow-2xl shadow-foreground/15 border border-border-color bg-background group">
             <Image
-              src="/hero_child_smiling.png"
+              src="/Cancer%20Day%202026/IMG_4991.webp"
               alt="A smiling brave child painting with vibrant watercolors at the Miracle Leukemia shelter"
               fill
               priority
