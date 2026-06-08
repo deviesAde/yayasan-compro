@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
-import { Envelope, WhatsappLogo, InstagramLogo, MapPin, Heart, CaretRight, Sparkle } from "@phosphor-icons/react";
+import { Envelope, WhatsappLogo, InstagramLogo, MapPin, CaretRight, Sparkle } from "@phosphor-icons/react";
 
 export default function ContactFooter() {
   const reduceMotion = useReducedMotion();
@@ -161,12 +162,35 @@ export default function ContactFooter() {
           {/* Brand Details */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-3">
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-8 h-8 rounded-full bg-cream flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Heart weight="fill" className="text-terracotta w-4 h-4" />
+              <div
+                className="relative w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
+                style={{ backgroundColor: "#CC5C3D" }}
+              >
+                <Image
+                  src="/logo.png"
+                  alt="Logo"
+                  fill
+                  className="object-contain p-1.5"
+                />
               </div>
-              <span className="font-sans font-bold text-base text-cream tracking-tight">
-                Miracle Leukemia Foundation
-              </span>
+              <div className="flex flex-col leading-none">
+                <div className="flex items-baseline gap-1.5">
+                  <div className="relative h-[18px] w-[58px]">
+                    <Image
+                      src="/logo1.png"
+                      alt="Miracle"
+                      fill
+                      className="object-contain object-left brightness-0 invert"
+                    />
+                  </div>
+                  <span className="font-sans font-bold text-base text-cream tracking-tight leading-none">
+                    Leukemia
+                  </span>
+                </div>
+                <span className="text-[9px] text-cream/60 font-mono tracking-[0.2em] uppercase mt-1">
+                  Befriend the Brave
+                </span>
+              </div>
             </Link>
             <p className="text-[10px] text-cream/60 font-mono tracking-wide max-w-[32ch] uppercase font-bold">
               Registered Pediatric Cancer Non-Profit. License No. 42A/SK-YAY/2018.

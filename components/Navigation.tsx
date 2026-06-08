@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Heart, List, X } from "@phosphor-icons/react";
+import { List, X } from "@phosphor-icons/react";
 import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
+
+import Image from "next/image";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,14 +55,32 @@ export default function Navigation() {
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-10 h-10 rounded-full bg-terracotta flex items-center justify-center transition-colors shadow-sm"
+            className="relative w-12 h-12 rounded-full flex items-center justify-center transition-transform duration-300"
+            style={{ backgroundColor: "#CC5C3D" }}
           >
-            <Heart weight="fill" className="text-cream w-5.5 h-5.5" />
+            <Image
+              src="/logoo.png"
+              alt="Logo"
+              fill
+              className="object-contain p-1.5"
+              priority
+            />
           </motion.div>
-          <div className="flex flex-col">
-            <span className="font-sans font-bold text-lg md:text-xl tracking-tight text-foreground leading-none">
-              Miracle Leukemia
-            </span>
+          <div className="flex flex-col leading-none">
+            <div className="flex items-baseline gap-1.5">
+              <div className="relative h-[22px] w-[72px] mt-1.5">
+                <Image
+                  src="/logo1.png"
+                  alt="Miracle"
+                  fill
+                  className="object-contain object-left"
+                  priority
+                />
+              </div>
+              <span className="font-sans font-bold text-lg md:text-xl tracking-tight text-foreground leading-none">
+                Leukemia
+              </span>
+            </div>
             <span className="text-[9px] text-foreground-subtle font-mono tracking-[0.2em] uppercase mt-1">
               Befriend the Brave
             </span>

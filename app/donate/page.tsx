@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import Navigation from "@/components/Navigation";
@@ -222,16 +223,16 @@ export default function DonatePage() {
                     <h3 className="text-2xl font-bold text-foreground font-sans">Official QRIS QR.</h3>
                   </div>
                   <div className="relative p-10 rounded-[40px] border border-border-color bg-background w-full aspect-square flex flex-col items-center justify-center shadow-inner group">
-                    <svg viewBox="0 0 100 100" className="w-full h-full text-foreground" fill="currentColor">
-                      <path d="M0 0h30v30H0zm5 5v20h20V5zm5 5h10v10H10zm60-10h30v30H70zm5 5v20h20V5zm5 5h10v10H80zM0 70h30v30H0zm5 5v20h20V5zm5 5h10v10H10z" />
-                      <path d="M40 5h5v5h-5zm10 0h5v10h-5zm10 5h5v5h-5zm0 10h15v5H60zm-20 5h10v5H40zm25 0h5v5h-5zm-25 10h5v5h-5zm15 0h10v5H50zm-10 10h5v10h-5zm15 5h5v5h-5zm10-5h5v5h-5zm-15 10h5v5h-5zm20 0h10v5H80zm-40 0h5v5h-5zm25-10h5v5h-5zm15 0h5v5h-5zm0-10h5v5h-5zm-10 0h5v5h-5zm10-10h5v5h-5z" />
-                      <rect x="35" y="42" width="30" height="16" rx="4" fill="var(--color-terracotta)" />
-                      <text x="50" y="52" fontSize="6" fontWeight="bold" fill="white" textAnchor="middle">QRIS</text>
-                    </svg>
+                    <Image
+                       src="/logo.png"
+                       alt="Yayasan Kanker Anak Sumatera Selatan"
+                       fill
+                       className="object-contain"
+                       sizes="(max-width: 768px) 200px, 300px"
+                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <p className="text-base font-bold text-foreground tracking-tight">Miracle Leukemia Foundation</p>
-                    <p className="text-[11px] text-foreground/40 font-mono font-bold tracking-widest uppercase">NMID: ID1029384756302</p>
+                    <p className="text-base font-bold text-foreground tracking-tight">Yayasan Kanker Anak Sumatera Selatan</p>
                   </div>
                   <p className="text-sm text-foreground/50 leading-relaxed font-medium">Scan using any mobile banking app or digital wallet to transfer instantly.</p>
                 </div>
@@ -244,14 +245,14 @@ export default function DonatePage() {
                   </div>
                   <div className="flex flex-col gap-6">
                     <div className="flex flex-col gap-2 p-8 rounded-[32px] bg-foreground/[0.02] border border-border-color group hover:border-slate-blue/30 transition-all duration-300">
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-foreground/30 font-bold group-hover:text-slate-blue transition-colors">BANK BCA</span>
-                      <p className="text-2xl font-bold text-foreground tracking-tighter font-sans">845 520 2211</p>
-                      <p className="text-xs font-bold text-foreground/60 uppercase tracking-wide">A.N. Miracle Leukemia Indonesia</p>
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-foreground/30 font-bold group-hover:text-slate-blue transition-colors">BANK MANDIRI</span>
+                      <p className="text-2xl font-bold text-foreground tracking-tighter font-sans">112-00-0160916-8</p>
+                      <p className="text-xs font-bold text-foreground/60 uppercase tracking-wide">A.N. Yayasan Kanker Anak Sumatera Selatan</p>
                     </div>
                     <div className="flex flex-col gap-2 p-8 rounded-[32px] bg-foreground/[0.02] border border-border-color group hover:border-slate-blue/30 transition-all duration-300">
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-foreground/30 font-bold group-hover:text-slate-blue transition-colors">BANK MANDIRI</span>
-                      <p className="text-2xl font-bold text-foreground tracking-tighter font-sans">118 000 9844 322</p>
-                      <p className="text-xs font-bold text-foreground/60 uppercase tracking-wide">A.N. Miracle Leukemia Indonesia</p>
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-foreground/30 font-bold group-hover:text-slate-blue transition-colors">BANK SUMSEL BABEL</span>
+                      <p className="text-2xl font-bold text-foreground tracking-tighter font-sans">1500970000</p>
+                      <p className="text-xs font-bold text-foreground/60 uppercase tracking-wide">A.N. Yayasan Kanker Anak Sumatera Selatan</p>
                     </div>
                   </div>
                   <p className="text-sm text-foreground/50 leading-relaxed font-medium">Ensure you save your deposit slip photo or screenshot and upload it in the form for verification.</p>
@@ -274,3 +275,8 @@ export default function DonatePage() {
     </div>
   );
 }
+
+
+
+
+
