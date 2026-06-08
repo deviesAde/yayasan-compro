@@ -84,7 +84,7 @@ export default function DonatePage() {
                   animate={{ scale: 1 }}
                   transition={{ type: "spring", stiffness: 200, damping: 20 }}
                >
-                 <CheckCircle size={40} weight="fill" />
+                  <CheckCircle size={40} weight="fill" />
                </motion.div>
             </div>
             <div className="flex flex-col gap-3">
@@ -222,12 +222,15 @@ export default function DonatePage() {
                     <span className="text-[10px] font-mono tracking-[0.3em] text-foreground/40 uppercase font-bold">Instant Scan Code</span>
                     <h3 className="text-2xl font-bold text-foreground font-sans">Official QRIS QR.</h3>
                   </div>
-                  <div className="relative p-10 rounded-[40px] border border-border-color bg-background w-full aspect-square flex flex-col items-center justify-center shadow-inner group">
-                    <Image
-                       src="/logo.png"
-                       alt="Yayasan Kanker Anak Sumatera Selatan"
+                  <div className="relative p-12 rounded-[40px] border border-amber/40 bg-gradient-to-br from-background to-amber/5 w-full aspect-square flex flex-col items-center justify-center shadow-2xl shadow-amber/20 hover:shadow-2xl hover:shadow-amber/40 transition-all duration-500 group overflow-hidden">
+                     {/* Decorative glow effect */}
+                     <div className="absolute inset-0 rounded-[40px] bg-gradient-to-br from-amber/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                     
+                     <Image
+                       src="/qris.jpeg"
+                       alt="QRIS QR Code"
                        fill
-                       className="object-contain"
+                       className="object-contain p-6 relative z-10"
                        sizes="(max-width: 768px) 200px, 300px"
                      />
                   </div>
@@ -275,8 +278,3 @@ export default function DonatePage() {
     </div>
   );
 }
-
-
-
-
-

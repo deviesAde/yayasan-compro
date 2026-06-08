@@ -151,7 +151,7 @@ export default function Hero() {
             </div>
             <div>
               <p className="text-[9px] font-mono uppercase tracking-[0.2em] text-foreground-subtle font-bold">Sanctuary</p>
-              <p className="text-sm font-bold text-foreground mt-0.5">Hope Shelter Home</p>
+              <p className="text-sm font-bold text-foreground mt-0.5">Home Shelter for Children with Cancer & Chronic Diseases</p>
             </div>
           </motion.div>
 

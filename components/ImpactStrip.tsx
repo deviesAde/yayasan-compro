@@ -14,14 +14,14 @@ export default function ImpactStrip() {
       color: "text-terracotta",
     },
     {
-      value: "300+",
+      value: "100+",
       label: "Volunteers active in home & hospital care",
       icon: UsersThree,
       color: "text-slate-blue",
     },
     {
-      value: "40+",
-      label: "Hospital visits & medical runs conducted",
+      value: "5",
+      label: "Provinces represented among our patients (South Sumatra, Bangka Belitung, Jambi, Bengkulu, and Lampung)",
       icon: Hospital,
       color: "text-amber",
     },

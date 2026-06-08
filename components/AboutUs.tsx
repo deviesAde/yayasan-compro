@@ -39,15 +39,15 @@ export default function AboutUs() {
               className="text-base md:text-lg text-foreground-subtle leading-relaxed flex flex-col gap-6 max-w-[55ch]"
             >
               <p>
-                Founded in 2018, Miracle Leukemia was born when oncology volunteers witnessed the heavy burden placed on families traveling from remote regions for pediatric cancer treatments.
+                Founded in 2018, Miracle Leukemia began as TUNICA Charity Concert, initiated by dr. Muhammad Adib Dwitamma Putra to support children living with chronic and life-threatening illnesses. In 2019, dr. Amira Azra and dr. Faiza Al Khalifa joined the movement. Following the COVID-19 pandemic, the three founders transformed it into a sustainable organization dedicated to children with leukemia, cancer, and other chronic diseases.
               </p>
               <p>
-                Many families had to sleep in hospital hallways or exhaust all savings on temporary lodgings. We established our first Home Shelter to give children a warm bed, nutritious food, and a clean space to laugh and play between therapies.
+                With the guidance of our mentor Dr. dr. Dian Puspita Sari, Sp.A(K) and Dr. Titin Hartini, S.E., M.Si. Along the way, we witnessed families traveling great distances for treatment, often sleeping in hospital hallways or exhausting their savings just to stay close to their children. Through awareness campaigns, fundraising initiatives, virtual runs, and solidarity movements, our mission continued to grow.
               </p>
               <div className="flex items-start gap-4 p-6 rounded-2xl bg-terracotta/[0.03] border border-terracotta/10">
                 <div className="mt-1 h-2 w-2 rounded-full bg-terracotta flex-shrink-0" />
                 <p className="font-semibold text-terracotta italic leading-relaxed">
-                  Today, our shelter operates as a hopeful sanctuary, ensuring that no young hero faces the chemotherapy battle without a loving support circle.
+                  Today, through Rumah Singgah Sehat Ceria, we provide a safe sanctuary where children and their families can find comfort, hope, and support. We also empower our young heroes through creative and educational activities, helping them develop life skills, learn entrepreneurship, and create handcrafted products that showcase their talents and generate meaningful opportunities. Today, our shelter ensures that no young hero faces the battle against cancer or chronic illness alone.
                 </p>
               </div>
             </motion.div>
@@ -73,7 +73,7 @@ export default function AboutUs() {
                 Our Vision
               </h3>
               <p className="text-sm md:text-base text-foreground-subtle leading-relaxed max-w-[40ch]">
-                To build a supportive sanctuary where every child battling leukemia receives therapeutic housing, high-quality nutritional care, and robust emotional guidance.
+                To build a supportive sanctuary where every child battling leukemia, cancer, or chronic diseases receives safe housing, quality care, and compassionate support throughout their treatment journey.
               </p>
             </div>
           </motion.div>
@@ -92,7 +92,7 @@ export default function AboutUs() {
                 Our Mission
               </h3>
               <p className="text-sm md:text-base text-foreground-subtle leading-relaxed max-w-[40ch]">
-                We manage clean home shelters, deliver specialized dietary milk kits, coordinate volunteers for ward visits, and provide cost-free support services to households.
+                We provide safe home shelters, essential medical and nutritional support, educational and creative development programs, and compassionate care for children with leukemia, cancer, and chronic diseases. Through volunteer engagement, family assistance, and entrepreneurship initiatives, we empower our young heroes and their families throughout their treatment journey.
               </p>
             </div>
           </motion.div>
@@ -110,7 +110,7 @@ export default function AboutUs() {
                 Organizational Integrity
               </h3>
               <p className="text-sm md:text-base text-foreground-subtle leading-relaxed max-w-[40ch]">
-                Our support is open to all patients without discrimination. We operate with complete financial transparency, publishing impact reports for our donors and partners.
+                We serve children and families from all backgrounds with compassion, fairness, and respect. Guided by transparency and accountability, we ensure that every donation is managed responsibly and every impact is openly shared with our donors, partners, and community.
               </p>
             </div>
           </motion.div>

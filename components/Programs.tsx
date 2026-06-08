@@ -100,7 +100,7 @@ export default function Programs() {
             Core Support Programs
           </h2>
           <p className="text-base md:text-lg text-foreground/80 leading-relaxed max-w-[60ch] font-medium">
-            Comprehensive support structures spanning healthcare accommodation, clinical nutrition, and emotional therapy.
+            Comprehensive support programs providing safe shelter, medical assistance, nutritional support, educational enrichment, creative development, entrepreneurship training, and emotional care for children with leukemia, cancer, and chronic diseases.
           </p>
         </div>
 
@@ -195,3 +195,4 @@ export default function Programs() {
     </section>
   );
 }
+

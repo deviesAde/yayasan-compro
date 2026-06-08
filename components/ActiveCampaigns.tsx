@@ -31,7 +31,7 @@ export default function ActiveCampaigns() {
     },
     {
       title: "Brave Hearts: Life-Saving Medical Fund",
-      description: "Financing emergency blood transfusions, medicines, and specialized diagnostic tests for families in financial need.",
+      description: "Providing urgent financial support for our heroes whenever emergency medical needs arise.",
       image: "/Miracle%20of%20Smile%202026/grain-8608.webp",
       tag: "Medical",
       accent: "bg-rose",
