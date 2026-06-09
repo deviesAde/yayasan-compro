@@ -99,7 +99,7 @@ export default function Programs() {
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground font-sans text-balance max-w-[20ch]">
             Core Support Programs
           </h2>
-          <p className="text-base md:text-lg text-foreground/80 leading-relaxed max-w-[60ch] font-medium">
+          <p className="text-base md:text-lg text-foreground/80 leading-relaxed max-w-[60ch] font-medium text-justify">
             Comprehensive support programs providing safe shelter, medical assistance, nutritional support, educational enrichment, creative development, entrepreneurship training, and emotional care for children with leukemia, cancer, and chronic diseases.
           </p>
         </div>
@@ -146,16 +146,10 @@ export default function Programs() {
                         <h3 className="text-2xl font-bold font-sans text-cream leading-tight">
                           {prog.title}
                         </h3>
-                        <p className="text-sm text-cream/70 leading-relaxed max-w-[40ch]">
+                        <p className="text-sm text-cream/70 leading-relaxed max-w-[40ch] text-justify">
                           {prog.desc}
                         </p>
-                        <Link
-                          href="/activity-log"
-                          className="inline-flex items-center gap-2 mt-2 text-xs font-bold uppercase tracking-widest text-amber hover:text-cream transition-colors group/link"
-                        >
-                          Read Activity Log
-                          <ArrowUpRight size={16} weight="bold" className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-                        </Link>
+
                       </div>
                     </div>
                   </>
@@ -174,16 +168,10 @@ export default function Programs() {
                       <h3 className="text-2xl font-bold font-sans text-foreground leading-tight">
                         {prog.title}
                       </h3>
-                      <p className="text-sm text-foreground-subtle leading-relaxed max-w-[40ch]">
+                      <p className="text-sm text-foreground-subtle leading-relaxed max-w-[40ch] text-justify">
                         {prog.desc}
                       </p>
-                      <Link
-                        href="/activity-log"
-                        className="inline-flex items-center gap-2 mt-2 text-xs font-bold uppercase tracking-widest text-foreground hover:text-terracotta transition-colors group/link"
-                      >
-                        Read Impact Report
-                        <ArrowUpRight size={16} weight="bold" className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-                      </Link>
+
                     </div>
                   </div>
                 )}

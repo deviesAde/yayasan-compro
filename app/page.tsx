@@ -4,7 +4,6 @@ import ImpactStrip from "@/components/ImpactStrip";
 import ActiveCampaigns from "@/components/ActiveCampaigns";
 import AboutUs from "@/components/AboutUs";
 import Programs from "@/components/Programs";
-import Stories from "@/components/Stories";
 import Gallery from "@/components/Gallery";
 import ContactFooter from "@/components/ContactFooter";
 
@@ -30,9 +29,6 @@ export default function Home() {
 
         {/* Core programs grid (Bento) */}
         <Programs />
-
-        {/* Stories, testimonies and logs */}
-        <Stories />
 
         {/* Activity photos grid */}
         <Gallery />

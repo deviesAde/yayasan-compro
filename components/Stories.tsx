@@ -2,24 +2,26 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { motion, useReducedMotion } from "motion/react";
+import { useState, useRef } from "react";
+import { motion, useReducedMotion, useInView } from "motion/react";
 import { Play, Calendar, ChatTeardrop, Sparkle, CaretRight } from "@phosphor-icons/react";
 
 export default function Stories() {
   const reduceMotion = useReducedMotion();
   const [isPlaying, setIsPlaying] = useState(false);
+  const timelineRef = useRef(null);
+  const isInView = useInView(timelineRef, { once: false, margin: "-100px" });
 
   const testimonials = [
     {
-      text: "\u201cHaving a clean bed and healthy meals at the shelter allowed our daughter to focus entirely on her chemotherapy recovery and healing.\u201d",
+      text: "\\u201cHaving a clean bed and healthy meals at the shelter allowed our daughter to focus entirely on her chemotherapy recovery and healing.\\u201d",
       author: "Rahmawati",
       role: "Mother of Patient Aldy",
       org: "Miracle Shelter Family",
       bgClass: "bg-slate-blue/10 text-foreground border border-slate-blue/10",
     },
     {
-      text: "\u201cVolunteering at the shelter reshaped my life. Helping these brave children paint, study, and smile is a deeply grounding experience.\u201d",
+      text: "\\u201cVolunteering at the shelter reshaped my life. Helping these brave children paint, study, and smile is a deeply grounding experience.\\u201d",
       author: "Budi Santoso",
       role: "Lead Educator",
       org: "Volunteer Network",
@@ -32,18 +34,26 @@ export default function Stories() {
       date: "May 28, 2026",
       title: "Art Therapy and Watercolor Session",
       desc: "Ten children created hope banners and custom watercolor paintings during our weekly therapy block in the main activity hall.",
+      icon: "🎨",
     },
     {
       date: "May 22, 2026",
       title: "Pediatric Ward Distribution Run",
       desc: "Delivered forty nutritional kits and personalized care packages directly to oncology outpatient rooms at the central hospital.",
+      icon: "📦",
+    },
+    {
+      date: "May 15, 2026",
+      title: "Volunteer Coordination Meeting",
+      desc: "Strategic planning session with volunteer squads to streamline care protocols and expand support for patient families across five provinces.",
+      icon: "🤝",
     },
   ];
 
   return (
     <section id="stories" className="w-full py-32 px-6 md:px-12 max-w-[1400px] mx-auto bg-background border-t border-border-color">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
-        {/* Left Column: Cinematic Video & Logs (7 Columns) */}
+        {/* Left Column: Cinematic Video & Timeline Logs (7 Columns) */}
         <div className="lg:col-span-7 flex flex-col gap-16">
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-3">
@@ -103,17 +113,17 @@ export default function Stories() {
                 Patient Spotlight
               </p>
               <h3 className="text-xl md:text-2xl font-bold font-sans mt-2 text-balance leading-tight">
-                Aldy\u2019s Walk: From Hospital Outpatient to School Re-entry
+                Aldy's Walk: From Hospital Outpatient to School Re-entry
               </h3>
             </div>
           </motion.div>
 
-          {/* Volunteer Logs (Refined Grid) */}
+          {/* Activity Timeline with Animated Line */}
           <div className="flex flex-col gap-8">
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-bold text-foreground font-sans flex items-center gap-3">
                 <Calendar size={24} weight="fill" className="text-terracotta" />
-                Recent Volunteer Logs
+                Activity & Impact Log
               </h3>
               <Link 
                 href="/activity-log"
@@ -122,23 +132,95 @@ export default function Stories() {
                 View Full Log <CaretRight weight="bold" className="transition-transform group-hover/all:translate-x-1" />
               </Link>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {volunteerLogs.map((log, i) => (
-                <div
-                  key={i}
-                  className="p-8 rounded-[32px] bg-foreground/[0.02] border border-border-color flex flex-col gap-3 hover:border-foreground/15 hover:bg-foreground/[0.03] transition-all duration-300 group"
-                >
-                  <span className="text-[10px] font-mono tracking-widest text-foreground-subtle uppercase font-bold group-hover:text-terracotta transition-colors">
-                    {log.date}
-                  </span>
-                  <h4 className="text-base font-bold text-foreground leading-tight">
-                    {log.title}
-                  </h4>
-                  <p className="text-sm text-foreground-subtle leading-relaxed text-justify">
-                    {log.desc}
-                  </p>
-                </div>
-              ))}
+
+            {/* Timeline Container */}
+            <div ref={timelineRef} className="relative pl-8 md:pl-12">
+              {/* Animated Timeline Line */}
+              <svg
+                className="absolute left-0 top-0 h-full w-8 md:w-12 pointer-events-none"
+                viewBox="0 0 40 1000"
+                preserveAspectRatio="none"
+              >
+                <defs>
+                  <style>
+                    {`
+                      @keyframes drawLine {
+                        from {
+                          stroke-dashoffset: 1000;
+                        }
+                        to {
+                          stroke-dashoffset: 0;
+                        }
+                      }
+                      .timeline-line {
+                        stroke: url(#timelineGradient);
+                        stroke-width: 3;
+                        fill: none;
+                        stroke-dasharray: 1000;
+                        stroke-linecap: round;
+                        animation: ${isInView && !reduceMotion ? "drawLine 2s ease-in-out forwards" : "none"};
+                      }
+                    `}
+                  </style>
+                  <linearGradient id="timelineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#cc5b3b" stopOpacity="1" />
+                    <stop offset="50%" stopColor="#f5b861" stopOpacity="1" />
+                    <stop offset="100%" stopColor="#da8280" stopOpacity="1" />
+                  </linearGradient>
+                </defs>
+                <path className="timeline-line" d="M 20 20 L 20 980" />
+              </svg>
+
+              {/* Timeline Nodes */}
+              <div className="flex flex-col gap-12">
+                {volunteerLogs.map((log, i) => (
+                  <motion.div
+                    key={i}
+                    initial={reduceMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8, x: -20 }}
+                    whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{
+                      duration: 0.6,
+                      delay: isInView ? i * 0.2 : 0,
+                      ease: [0.16, 1, 0.3, 1],
+                    }}
+                    className="relative"
+                  >
+                    {/* Timeline Node Dot */}
+                    <motion.div
+                      className="absolute -left-[26px] md:-left-[38px] top-6 w-6 h-6 md:w-8 md:h-8 rounded-full bg-background border-4 border-terracotta flex items-center justify-center shadow-lg z-10"
+                      initial={reduceMotion ? { scale: 1 } : { scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true, margin: "-50px" }}
+                      transition={{
+                        duration: 0.5,
+                        delay: isInView ? i * 0.2 + 0.1 : 0,
+                        ease: "easeOut",
+                      }}
+                    >
+                      <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-gradient-to-br from-terracotta to-amber" />
+                    </motion.div>
+
+                    {/* Activity Card */}
+                    <div className="p-8 rounded-[32px] bg-gradient-to-br from-foreground/[0.02] to-foreground/[0.01] border border-border-color hover:border-foreground/15 hover:bg-foreground/[0.03] transition-all duration-300 group shadow-sm hover:shadow-md">
+                      <div className="flex items-start gap-4 mb-4">
+                        <span className="text-3xl md:text-4xl">{log.icon}</span>
+                        <div className="flex-1">
+                          <span className="text-[10px] font-mono tracking-widest text-foreground-subtle uppercase font-bold group-hover:text-terracotta transition-colors">
+                            {log.date}
+                          </span>
+                          <h4 className="text-base md:text-lg font-bold text-foreground leading-tight mt-2">
+                            {log.title}
+                          </h4>
+                        </div>
+                      </div>
+                      <p className="text-sm text-foreground-subtle leading-relaxed text-justify">
+                        {log.desc}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

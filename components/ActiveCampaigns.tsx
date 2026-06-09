@@ -59,7 +59,7 @@ export default function ActiveCampaigns() {
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground font-sans text-balance max-w-[20ch]">
             Sustain Our Missions.
           </h2>
-          <p className="text-foreground/75 text-sm md:text-base leading-relaxed max-w-[45ch] font-medium">
+          <p className="text-foreground/75 text-sm md:text-base leading-relaxed max-w-[45ch] font-medium text-justify">
             Your ongoing contributions fuel our daily support structures, ensuring no child faces the battle alone.
           </p>
         </div>
@@ -101,18 +101,12 @@ export default function ActiveCampaigns() {
                   <h3 className="text-2xl font-bold text-foreground leading-tight group-hover:text-terracotta transition-colors duration-300">
                     {camp.title}
                   </h3>
-                  <p className="text-sm text-foreground-subtle leading-relaxed font-medium">
+                  <p className="text-sm text-foreground-subtle leading-relaxed font-medium text-justify">
                     {camp.description}
                   </p>
                 </div>
 
                 <div className="mt-auto flex flex-col gap-6">
-                  <Link
-                    href="/activity-log"
-                    className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-foreground-subtle hover:text-terracotta transition-colors group/link"
-                  >
-                    View Activity Log <CaretRight weight="bold" className="transition-transform group-hover/link:translate-x-1" />
-                  </Link>
 
                   {/* Action Button (Tactile) */}
                   <Link

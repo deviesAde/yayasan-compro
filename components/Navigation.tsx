@@ -33,8 +33,6 @@ export default function Navigation() {
   const navLinks = [
     { name: "Home", href: "/#home" },
     { name: "Programs", href: "/#programs" },
-    { name: "Stories", href: "/#stories" },
-    { name: "Activity Log", href: "/activity-log" },
     { name: "Gallery", href: "/#gallery" },
     { name: "Contact", href: "/#contact" },
   ];

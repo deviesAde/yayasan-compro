@@ -11,18 +11,16 @@ export default function ContactFooter() {
   const socialLinks = [
     {
       name: "Instagram Profile",
-      href: "https://instagram.com/miracleleukemia",
+      href: "https://instagram.com/miracleukemia",
       icon: InstagramLogo,
       color: "text-[#E1306C]",
-      label: "@miracleleukemia",
+      label: "@miracleukemia",
     },
   ];
 
   const quickLinks = [
     { name: "Home", href: "/#home" },
     { name: "Programs", href: "/#programs" },
-    { name: "Brave Stories", href: "/#stories" },
-    { name: "Activity Log", href: "/activity-log" },
     { name: "Photo Gallery", href: "/#gallery" },
     { name: "Donate Care", href: "/donate" },
   ];
@@ -92,6 +90,21 @@ export default function ContactFooter() {
                 </p>
               </div>
             </div>
+
+            {/* Email Contact */}
+            <a href="mailto:miracleukemia@gmail.com" className="flex gap-4 items-start p-6 rounded-[32px] bg-cream/20 border border-cream/10 group hover:bg-cream/25 transition-all duration-300">
+              <div className="p-3 rounded-2xl bg-cream/20 text-cream group-hover:scale-110 transition-transform">
+                <Envelope size={24} weight="fill" />
+              </div>
+              <div className="flex flex-col text-left">
+                <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-cream/60 font-bold">
+                  Email Us
+                </span>
+                <p className="text-sm md:text-base font-bold text-cream mt-2 leading-relaxed text-balance">
+                  miracleukemia@gmail.com
+                </p>
+              </div>
+            </a>
           </div>
 
           {/* Right Column: Map Location Card */}
@@ -123,14 +136,14 @@ export default function ContactFooter() {
                     />
                     <MapPin size={24} className="text-cream relative z-10" weight="fill" />
                   </div>
-                  <div className="flex flex-col gap-1">
-                    <h3 className="text-lg font-bold text-foreground font-sans leading-snug">
-                      Miracle Palembang Shelter
-                    </h3>
-                    <p className="text-[11px] text-foreground-subtle leading-tight font-semibold">
-                      Rumah Sehat Ceria Yayasan Kanker Anak Sumsel
-                    </p>
-                  </div>
+                   <div className="flex flex-col gap-1">
+                     <h3 className="text-lg font-bold text-foreground font-sans leading-snug">
+                       MIRACLE/ Rumah Singgah Sehat Ceria
+                     </h3>
+                     <p className="text-[11px] text-foreground-subtle leading-tight font-semibold">
+                       Rumah Sehat Ceria Yayasan Kanker Anak Sumsel
+                     </p>
+                   </div>
                 </div>
 
                 <div className="h-[1px] bg-foreground/10 w-full" />
@@ -198,9 +211,7 @@ export default function ContactFooter() {
                 />
               </div>
             </div>
-            <p className="text-[10px] text-cream/60 font-mono tracking-wide max-w-[32ch] uppercase font-bold">
-              Registered Pediatric Cancer Non-Profit. License No. 42A/SK-YAY/2018.
-            </p>
+
           </div>
 
           {/* Quick Footer Links */}

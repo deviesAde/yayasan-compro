@@ -66,7 +66,7 @@ export default function DonatePage() {
           </motion.h1>
           <motion.p 
             {...animationProps(0.2)}
-            className="text-base md:text-lg text-foreground/60 leading-relaxed font-medium"
+            className="text-base md:text-lg text-foreground/60 leading-relaxed font-medium text-justify"
           >
             100% of public donations directly fund home shelter accommodation, oncology nutrition packs, and emergency medical fees.
           </motion.p>
@@ -91,7 +91,7 @@ export default function DonatePage() {
               <h2 className="text-3xl font-bold text-foreground font-sans leading-tight">
                 Thank You for Your Hope.
               </h2>
-              <p className="text-base text-foreground/60 leading-relaxed font-medium">
+              <p className="text-base text-foreground/60 leading-relaxed font-medium text-justify">
                 Our social care coordinators have received your donation details. We will verify the transaction and send the official tax receipt to <strong className="text-foreground">{formData.email}</strong> shortly.
               </p>
             </div>
@@ -117,7 +117,7 @@ export default function DonatePage() {
                   <h3 className="text-sm font-bold text-foreground font-sans">
                     Secure and Licensed Support Channel
                   </h3>
-                  <p className="text-xs text-foreground/50 leading-relaxed font-medium">
+                  <p className="text-xs text-foreground/50 leading-relaxed font-medium text-justify">
                     Authorized under Operational License 42A/SK-YAY/2018. Audited reports are published quarterly for transparency.
                   </p>
                 </div>
@@ -237,7 +237,7 @@ export default function DonatePage() {
                   <div className="flex flex-col gap-2">
                     <p className="text-base font-bold text-foreground tracking-tight">Yayasan Kanker Anak Sumatera Selatan</p>
                   </div>
-                  <p className="text-sm text-foreground/50 leading-relaxed font-medium">Scan using any mobile banking app or digital wallet to transfer instantly.</p>
+                  <p className="text-sm text-foreground/50 leading-relaxed font-medium text-justify">Scan using any mobile banking app or digital wallet to transfer instantly.</p>
                 </div>
               ) : (
                 <div className="p-12 rounded-[48px] bg-background border border-border-color shadow-2xl shadow-foreground/5 flex flex-col gap-10 relative overflow-hidden">
@@ -258,7 +258,7 @@ export default function DonatePage() {
                       <p className="text-xs font-bold text-foreground/60 uppercase tracking-wide">A.N. Yayasan Kanker Anak Sumatera Selatan</p>
                     </div>
                   </div>
-                  <p className="text-sm text-foreground/50 leading-relaxed font-medium">Ensure you save your deposit slip photo or screenshot and upload it in the form for verification.</p>
+                  <p className="text-sm text-foreground/50 leading-relaxed font-medium text-justify">Ensure you save your deposit slip photo or screenshot and upload it in the form for verification.</p>
                 </div>
               )}
 
@@ -266,7 +266,7 @@ export default function DonatePage() {
                 <Sparkle weight="fill" className="text-amber w-6 h-6 mt-1" />
                 <div className="flex flex-col gap-2">
                    <h4 className="text-xs font-bold text-foreground uppercase tracking-widest font-mono">Tax Information</h4>
-                   <p className="text-xs text-foreground/60 leading-relaxed font-medium italic">Contributions above Rp 250,000 are eligible for income tax reductions under local finance ministry decree.</p>
+                   <p className="text-xs text-foreground/60 leading-relaxed font-medium italic text-justify">Contributions above Rp 250,000 are eligible for income tax reductions under local finance ministry decree.</p>
                 </div>
               </div>
             </motion.div>

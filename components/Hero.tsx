@@ -85,9 +85,9 @@ export default function Hero() {
           {/* Subtext: max 20 words, airy spacing */}
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-foreground/60 leading-relaxed max-w-[40ch] font-medium"
+            className="text-lg md:text-xl text-foreground/60 leading-relaxed max-w-[40ch] font-medium text-justify"
           >
-            Providing sanctuary, specialized nutrition, and heart-led support for children battling leukemia.
+            Providing sanctuary, specialized nutrition, and heart-led support for children battling leukemia, cancers and chronic diseases.
           </motion.p>
 
           {/* CTAs: High contrast, tactile feedback */}
@@ -109,7 +109,7 @@ export default function Hero() {
               className="inline-flex items-center gap-3 justify-center h-14 px-8 text-sm font-bold uppercase tracking-widest text-foreground border-2 border-border-color rounded-full hover:bg-foreground hover:text-background active:scale-[0.98] transition-all duration-300"
             >
               <Users weight="bold" className="w-5 h-5" />
-              Volunteer
+              Volunteer & Collaborate
             </Link>
           </motion.div>
         </motion.div>
