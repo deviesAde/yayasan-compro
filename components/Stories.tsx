@@ -53,7 +53,7 @@ export default function Stories() {
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground font-sans leading-tight">
               Brave Journeys.
             </h2>
-            <p className="text-base md:text-lg text-foreground-subtle leading-relaxed max-w-[55ch]">
+            <p className="text-base md:text-lg text-foreground-subtle leading-relaxed max-w-[55ch] text-justify">
               Watch our patient spotlight journeys and see the active care logs updated weekly by our shelter volunteer squads.
             </p>
           </div>
@@ -134,7 +134,7 @@ export default function Stories() {
                   <h4 className="text-base font-bold text-foreground leading-tight">
                     {log.title}
                   </h4>
-                  <p className="text-sm text-foreground-subtle leading-relaxed">
+                  <p className="text-sm text-foreground-subtle leading-relaxed text-justify">
                     {log.desc}
                   </p>
                 </div>
@@ -163,7 +163,7 @@ export default function Stories() {
                 <div className="absolute top-0 right-0 w-24 h-24 bg-foreground/[0.02] rounded-full -translate-y-1/2 translate-x-1/2" />
                 
                 {/* Quote */}
-                <p className="relative z-10 text-base md:text-lg font-sans italic font-semibold leading-relaxed mb-8 text-balance text-foreground/80">
+                <p className="relative z-10 text-base md:text-lg font-sans italic font-semibold leading-relaxed mb-8 text-balance text-foreground/80 text-justify">
                   {test.text}
                 </p>
 

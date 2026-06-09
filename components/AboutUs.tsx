@@ -36,7 +36,7 @@ export default function AboutUs() {
 
             <motion.div
               {...animationProps(0.2)}
-              className="text-base md:text-lg text-foreground-subtle leading-relaxed flex flex-col gap-6 max-w-[55ch]"
+              className="text-base md:text-lg text-foreground-subtle leading-relaxed flex flex-col gap-6 max-w-[55ch] text-justify"
             >
               <p>
                 Founded in 2018, Miracle Leukemia began as TUNICA Charity Concert, initiated by dr. Muhammad Adib Dwitamma Putra to support children living with chronic and life-threatening illnesses. In 2019, dr. Amira Azra and dr. Faiza Al Khalifa joined the movement. Following the COVID-19 pandemic, the three founders transformed it into a sustainable organization dedicated to children with leukemia, cancer, and other chronic diseases.
@@ -72,7 +72,7 @@ export default function AboutUs() {
               <h3 className="text-xl font-bold text-foreground font-sans">
                 Our Vision
               </h3>
-              <p className="text-sm md:text-base text-foreground-subtle leading-relaxed max-w-[40ch]">
+              <p className="text-sm md:text-base text-foreground-subtle leading-relaxed max-w-[40ch] text-justify">
                 To build a supportive sanctuary where every child battling leukemia, cancer, or chronic diseases receives safe housing, quality care, and compassionate support throughout their treatment journey.
               </p>
             </div>
@@ -91,7 +91,7 @@ export default function AboutUs() {
               <h3 className="text-xl font-bold text-foreground font-sans">
                 Our Mission
               </h3>
-              <p className="text-sm md:text-base text-foreground-subtle leading-relaxed max-w-[40ch]">
+              <p className="text-sm md:text-base text-foreground-subtle leading-relaxed max-w-[40ch] text-justify">
                 We provide safe home shelters, essential medical and nutritional support, educational and creative development programs, and compassionate care for children with leukemia, cancer, and chronic diseases. Through volunteer engagement, family assistance, and entrepreneurship initiatives, we empower our young heroes and their families throughout their treatment journey.
               </p>
             </div>
@@ -109,7 +109,7 @@ export default function AboutUs() {
               <h3 className="text-xl font-bold text-foreground font-sans text-balance">
                 Organizational Integrity
               </h3>
-              <p className="text-sm md:text-base text-foreground-subtle leading-relaxed max-w-[40ch]">
+              <p className="text-sm md:text-base text-foreground-subtle leading-relaxed max-w-[40ch] text-justify">
                 We serve children and families from all backgrounds with compassion, fairness, and respect. Guided by transparency and accountability, we ensure that every donation is managed responsibly and every impact is openly shared with our donors, partners, and community.
               </p>
             </div>

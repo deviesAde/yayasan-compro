@@ -3,19 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
-import { Envelope, WhatsappLogo, InstagramLogo, MapPin, CaretRight, Sparkle } from "@phosphor-icons/react";
+import { Envelope, InstagramLogo, MapPin, CaretRight, Sparkle } from "@phosphor-icons/react";
 
 export default function ContactFooter() {
   const reduceMotion = useReducedMotion();
 
   const socialLinks = [
-    {
-      name: "WhatsApp Care Line",
-      href: "https://wa.me/628123456789",
-      icon: WhatsappLogo,
-      color: "text-[#25D366]",
-      label: "+62 812-3456-789",
-    },
     {
       name: "Instagram Profile",
       href: "https://instagram.com/miracleleukemia",
@@ -52,7 +45,7 @@ export default function ContactFooter() {
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-cream font-sans">
                 Reach Our Shelter.
               </h2>
-              <p className="text-base md:text-lg text-cream/80 leading-relaxed max-w-[45ch] font-medium">
+              <p className="text-base md:text-lg text-cream/80 leading-relaxed max-w-[45ch] font-medium text-justify">
                 Have questions about donating, volunteering, or seeking shelter placement? Get in touch with our social care coordinators.
               </p>
             </div>

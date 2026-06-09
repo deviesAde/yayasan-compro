@@ -25,7 +25,7 @@ export default function Gallery() {
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground font-sans text-balance max-w-[20ch]">
             Stories in Every Folder.
           </h2>
-          <p className="text-base md:text-lg text-foreground/80 leading-relaxed max-w-[60ch] font-medium">
+          <p className="text-base md:text-lg text-foreground/80 leading-relaxed max-w-[60ch] font-medium text-justify">
             Explore our journey through categorized albums. Each folder captures a unique chapter of joy, solidarity, and healing.
           </p>
         </div>
