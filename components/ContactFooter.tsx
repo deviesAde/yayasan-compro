@@ -3,24 +3,33 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
-import { Envelope, InstagramLogo, MapPin, CaretRight, Sparkle } from "@phosphor-icons/react";
+import { Envelope, WhatsappLogo, InstagramLogo, MapPin, CaretRight, Sparkle } from "@phosphor-icons/react";
 
 export default function ContactFooter() {
   const reduceMotion = useReducedMotion();
 
   const socialLinks = [
     {
+      name: "WhatsApp Care Line",
+      href: "https://wa.me/628123456789",
+      icon: WhatsappLogo,
+      color: "text-[#25D366]",
+      label: "+62 812-3456-789",
+    },
+    {
       name: "Instagram Profile",
-      href: "https://instagram.com/miracleukemia",
+      href: "https://instagram.com/miracleleukemia",
       icon: InstagramLogo,
       color: "text-[#E1306C]",
-      label: "@miracleukemia",
+      label: "@miracleleukemia",
     },
   ];
 
   const quickLinks = [
     { name: "Home", href: "/#home" },
     { name: "Programs", href: "/#programs" },
+    { name: "Brave Stories", href: "/#stories" },
+    { name: "Activity Log", href: "/activity-log" },
     { name: "Photo Gallery", href: "/#gallery" },
     { name: "Donate Care", href: "/donate" },
   ];
@@ -43,7 +52,7 @@ export default function ContactFooter() {
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-cream font-sans">
                 Reach Our Shelter.
               </h2>
-              <p className="text-base md:text-lg text-cream/80 leading-relaxed max-w-[45ch] font-medium text-justify">
+              <p className="text-base md:text-lg text-cream/80 leading-relaxed max-w-[45ch] font-medium">
                 Have questions about donating, volunteering, or seeking shelter placement? Get in touch with our social care coordinators.
               </p>
             </div>
@@ -90,21 +99,6 @@ export default function ContactFooter() {
                 </p>
               </div>
             </div>
-
-            {/* Email Contact */}
-            <a href="mailto:miracleukemia@gmail.com" className="flex gap-4 items-start p-6 rounded-[32px] bg-cream/20 border border-cream/10 group hover:bg-cream/25 transition-all duration-300">
-              <div className="p-3 rounded-2xl bg-cream/20 text-cream group-hover:scale-110 transition-transform">
-                <Envelope size={24} weight="fill" />
-              </div>
-              <div className="flex flex-col text-left">
-                <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-cream/60 font-bold">
-                  Email Us
-                </span>
-                <p className="text-sm md:text-base font-bold text-cream mt-2 leading-relaxed text-balance">
-                  miracleukemia@gmail.com
-                </p>
-              </div>
-            </a>
           </div>
 
           {/* Right Column: Map Location Card */}
@@ -136,19 +130,19 @@ export default function ContactFooter() {
                     />
                     <MapPin size={24} className="text-cream relative z-10" weight="fill" />
                   </div>
-                   <div className="flex flex-col gap-1">
-                     <h3 className="text-lg font-bold text-foreground font-sans leading-snug">
-                       MIRACLE/ Rumah Singgah Sehat Ceria
-                     </h3>
-                     <p className="text-[11px] text-foreground-subtle leading-tight font-semibold">
-                       Rumah Sehat Ceria Yayasan Kanker Anak Sumsel
-                     </p>
-                   </div>
+                  <div className="flex flex-col gap-1">
+                    <h3 className="text-lg font-bold text-foreground font-sans leading-snug">
+                      Miracle Palembang Shelter
+                    </h3>
+                    <p className="text-[11px] text-[#cb5d3e] leading-tight font-semibold">
+                      Rumah Sehat Ceria Yayasan Kanker Anak Sumsel
+                    </p>
+                  </div>
                 </div>
 
                 <div className="h-[1px] bg-foreground/10 w-full" />
 
-                <p className="text-xs text-foreground-muted leading-relaxed font-medium">
+                <p className="text-xs text-[#cb5d3e] leading-relaxed font-medium">
                   Jl. Lb. Rejo No.1083, Sekip Jaya, Kemuning, Palembang City, South Sumatra 30114
                 </p>
 
@@ -211,7 +205,9 @@ export default function ContactFooter() {
                 />
               </div>
             </div>
-
+            <p className="text-[10px] text-cream/60 font-mono tracking-wide max-w-[32ch] uppercase font-bold">
+              Registered Pediatric Cancer Non-Profit. License No. 42A/SK-YAY/2018.
+            </p>
           </div>
 
           {/* Quick Footer Links */}
