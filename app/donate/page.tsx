@@ -227,7 +227,7 @@ export default function DonatePage() {
                      <div className="absolute inset-0 rounded-[40px] bg-gradient-to-br from-amber/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                      
                      <Image
-                       src="/qris.jpeg"
+                       src="/qris.png"
                        alt="QRIS QR Code"
                        fill
                        className="object-contain p-6 relative z-10"
