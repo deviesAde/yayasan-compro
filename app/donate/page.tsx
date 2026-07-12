@@ -222,16 +222,16 @@ export default function DonatePage() {
                     <span className="text-[10px] font-mono tracking-[0.3em] text-foreground/40 uppercase font-bold">Instant Scan Code</span>
                     <h3 className="text-2xl font-bold text-foreground font-sans">Official QRIS QR.</h3>
                   </div>
-                  <div className="relative p-12 rounded-[40px] border border-amber/40 bg-gradient-to-br from-background to-amber/5 w-full aspect-square flex flex-col items-center justify-center shadow-2xl shadow-amber/20 hover:shadow-2xl hover:shadow-amber/40 transition-all duration-500 group overflow-hidden">
+                  <div className="relative p-3 rounded-[32px] border border-amber/40 bg-gradient-to-br from-background to-amber/5 w-full aspect-[1069/1600] flex flex-col items-center justify-center shadow-2xl shadow-amber/20 hover:shadow-2xl hover:shadow-amber/40 transition-all duration-500 group overflow-hidden">
                      {/* Decorative glow effect */}
-                     <div className="absolute inset-0 rounded-[40px] bg-gradient-to-br from-amber/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                     <div className="absolute inset-0 rounded-[32px] bg-gradient-to-br from-amber/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                      
                      <Image
                        src="/qris.png"
                        alt="QRIS QR Code"
                        fill
-                       className="object-contain p-6 relative z-10"
-                       sizes="(max-width: 768px) 200px, 300px"
+                       className="object-contain p-2 relative z-10"
+                       sizes="(max-width: 768px) 100vw, 500px"
                      />
                   </div>
                   <div className="flex flex-col gap-2">
