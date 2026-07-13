@@ -18,10 +18,17 @@ export default function ContactFooter() {
     },
     {
       name: "Instagram Profile",
-      href: "https://instagram.com/miracleleukemia",
+      href: "https://instagram.com/miracleukemia",
       icon: InstagramLogo,
       color: "text-[#E1306C]",
-      label: "@miracleleukemia",
+      label: "@miracleukemia",
+    },
+    {
+      name: "Email Address",
+      href: "mailto:miracleukemia@gmail.com",
+      icon: Envelope,
+      color: "text-[#EA4335]",
+      label: "miracleukemia@gmail.com",
     },
   ];
 

@@ -55,8 +55,9 @@ const jsonLd = {
     "Supporting children battling leukemia with housing shelters, nutritional aid, and emotional support.",
   url: "https://miracleleukemia.org",
   logo: "https://miracleleukemia.org/logo.png",
+  email: "miracleukemia@gmail.com",
   sameAs: [
-    "https://instagram.com/miracleleukemia",
+    "https://instagram.com/miracleukemia",
     "https://wa.me/628123456789",
   ],
   contactPoint: {
