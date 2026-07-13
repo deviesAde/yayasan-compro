@@ -58,13 +58,7 @@ const jsonLd = {
   email: "miracleukemia@gmail.com",
   sameAs: [
     "https://instagram.com/miracleukemia",
-    "https://wa.me/628123456789",
   ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+62-812-3456-789",
-    contactType: "customer service",
-  },
   address: {
     "@type": "PostalAddress",
     streetAddress: "Jalan Lb. Rejo No. 1083, Sekip Jaya, Kemuning",

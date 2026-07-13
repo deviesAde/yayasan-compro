@@ -10,13 +10,6 @@ export default function ContactFooter() {
 
   const socialLinks = [
     {
-      name: "WhatsApp Care Line",
-      href: "https://wa.me/628123456789",
-      icon: WhatsappLogo,
-      color: "text-[#25D366]",
-      label: "+62 812-3456-789",
-    },
-    {
       name: "Instagram Profile",
       href: "https://instagram.com/miracleukemia",
       icon: InstagramLogo,
