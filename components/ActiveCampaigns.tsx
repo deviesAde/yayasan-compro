@@ -22,7 +22,7 @@ export default function ActiveCampaigns() {
     {
       title: "Nutrition & Care Kits for Young Heroes",
       description: "Delivering boxes filled with clinical milk powder, vitamins, healthy fruits, and toys to children during recovery phases.",
-      image: "/Cancer%20Day%202026/IMG_5002.webp",
+      image: "/cancer-day-2026/IMG_5002.webp",
       tag: "Nutrition",
       accent: "bg-amber",
       hoverClass: "hover:shadow-amber/10 hover:border-amber/40",
@@ -32,7 +32,7 @@ export default function ActiveCampaigns() {
     {
       title: "Brave Hearts: Life-Saving Medical Fund",
       description: "Providing urgent financial support for our heroes whenever emergency medical needs arise.",
-      image: "/Miracle%20of%20Smile%202026/grain-8608.webp",
+      image: "/miracle-of-smile-2026/grain-8608.webp",
       tag: "Medical",
       accent: "bg-rose",
       hoverClass: "hover:shadow-rose/10 hover:border-rose/40",
