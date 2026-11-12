@@ -112,6 +112,17 @@ export default function AboutUs() {
               <p className="text-sm md:text-base text-foreground-subtle leading-relaxed max-w-[40ch] text-justify">
                 We serve children and families from all backgrounds with compassion, fairness, and respect. Guided by transparency and accountability, we ensure that every donation is managed responsibly and every impact is openly shared with our donors, partners, and community.
               </p>
+              <div className="pt-3 mt-1 border-t border-slate-blue/30 flex flex-col gap-0.5 text-left">
+                <span className="text-[10px] font-mono tracking-wider uppercase text-foreground/50 font-bold">
+                  SK Kemenkumham RI
+                </span>
+                <span className="text-xs font-mono font-bold text-foreground">
+                  AHU-0040955.AH.01.12.Tahun 2016
+                </span>
+                <span className="text-[10px] font-mono text-foreground-subtle">
+                  Daftar Yayasan Tanggal 27 September 2016
+                </span>
+              </div>
             </div>
           </motion.div>
         </div>

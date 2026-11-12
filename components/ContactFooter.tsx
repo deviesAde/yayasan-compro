@@ -205,8 +205,8 @@ export default function ContactFooter() {
                 />
               </div>
             </div>
-            <p className="text-[10px] text-cream/60 font-mono tracking-wide max-w-[32ch] uppercase font-bold">
-              Registered Pediatric Cancer Non-Profit. License No. 42A/SK-YAY/2018.
+            <p className="text-[10px] text-cream/70 font-mono tracking-wide max-w-[48ch] uppercase font-bold">
+              Yayasan Kanker Anak Sumatera Selatan • SK Kemenkumham RI No. AHU-0040955.AH.01.12.Tahun 2016 (27 Sept 2016)
             </p>
           </div>
 

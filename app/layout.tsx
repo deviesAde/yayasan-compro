@@ -48,13 +48,16 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "NGO",
   name: "Miracle Leukemia",
-  alternateName: "Yayasan Miracle Leukemia",
+  alternateName: "Yayasan Kanker Anak Sumatera Selatan",
+  legalName: "Yayasan Kanker Anak Sumatera Selatan",
+  identifier: "AHU-0040955.AH.01.12.Tahun 2016",
+  foundingDate: "2016-09-27",
   description:
     "Supporting children battling leukemia with housing shelters, nutritional aid, and emotional support.",
   url: "https://miracleleukemia.org",
-  logo: "https://miracleleukemia.org/logo.png",
+  logo: "https://miracleleukemia.org/logoo.png",
   email: "miracleukemia@gmail.com",
   sameAs: [
     "https://instagram.com/miracleukemia",

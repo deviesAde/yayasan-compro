@@ -118,7 +118,7 @@ export default function DonatePage() {
                     Secure and Licensed Support Channel
                   </h3>
                   <p className="text-xs text-foreground/50 leading-relaxed font-medium text-justify">
-                    Authorized under Operational License 42A/SK-YAY/2018. Audited reports are published quarterly for transparency.
+                    Terdaftar resmi di Kemenkumham RI: SK No. AHU-0040955.AH.01.12.Tahun 2016 (Yayasan Kanker Anak Sumatera Selatan). Laporan teraudit dipublikasikan secara berkala demi transparansi dan akuntabilitas.
                   </p>
                 </div>
               </div>
